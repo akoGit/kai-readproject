@@ -61,7 +61,7 @@ inputBox.onkeyup = (e)=>{
         showSuggestions(emptyArray);
         main_page.addEventListener('click', () => {
             searchWrapper.classList.remove("activeSearch")
-            inputBox.value = ""
+            // inputBox.value = ""
           
         })
 
@@ -73,7 +73,7 @@ inputBox.onkeyup = (e)=>{
         searchWrapper.classList.remove("activeSearch"); 
         main_page.addEventListener('click', () => {
             searchWrapper.classList.remove("activeSearch")
-            inputBox.value = ""
+            // inputBox.value = ""
         })
         featherX.addEventListener('click', ()=> {
             searchWrapper.classList.remove("activeSearch")
