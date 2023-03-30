@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+  <main>
+
+  <header class="navbar">
+    <div class="logo">
+        <img src="/assets/imgs/Payday.png" alt="logo">
+    </div>
+
+    <div class="nav_right">
+
+        <div class="wrapper">
+          <div class='search-input'>
+    
+            <input type='search' placeholder='Search' id="main_search">
+            <i data-feather="x" id="featherX"></i>
+               <div class="autocom-box">
+              <li>  John Doe &#x22C5 <span>Cashier</span></li>
+              <li> Invocie214.pdf &#x22C5 <span>Reports</span></li>
+               <li> Financial &#x22C5 <span>Banking</span></li>
+                 </div>
+            <div class='icon'><i data-feather="search"></i></div>
+          </div>
+           <i data-feather="bell" stroke-width="2" width='24' height='24'> </i> 
+        </div>
+
+
+  
+
+       <div class="nav_accout">
+        <img class='account_image' src="/assets/imgs/profile_asset.png" alt="profile image">
+        <div class="wrap_name">
+            <span class="name">Julia Hartmann</span>
+            <span class="position">Admin &#x22C5; Baumbach and Sons </span>
+        </div>
+
+       
+
+        <i data-feather="chevron-down" data-dropdown-button></i>
+
+        <div class="user_dropdown" data-dropdown>
+             <div class="profile"> 
+              <i data-feather="user" ></i>
+              <span>User profile</span>
+              </div>
+             <div class="profile"> 
+              <i data-feather="settings" ></i>
+              <span>Settings</span>
+              </div>
+             <div class="profile"> 
+              <i data-feather="log-out" ></i>
+              <span>Log out</span>
+              </div>
+        </div>
+
+       </div>
+       
+
+
+
+    </div>
+  </header>
+
+
+  <div class="main_wrapper">
+
+    <aside class="wrap_aside">
+      <ul>
+          <li>
+            <a href="#" class="logo_links" >
+            <i data-feather="home" stroke-width="1"></i>
+            <span>Home</span>
+          </a>
+          </li>
+  
+          <li><a href="#"  class="logo_links" >
+            <i data-feather="briefcase" stroke-width="1"></i>
+           <span>Banking</span>
+          </a>
+        </li>
+  
+          <li><a href="#"  class="logo_links" >
+            <i data-feather="users" stroke-width="1"></i>
+            <span>People</span>
+          </a></li>
+  
+          <li>
+            <a href="#"  class="logo_links" id="logo_links_btn">
+            <i data-feather="file-text" stroke-width="1" data-feather></i>
+            <span>Payroll</span>
+            <i data-feather="chevron-up" stroke-width="1" class="chevron-up"></i>
+          </a> 
+          <ul  class="show_links"  id="logo_links_show">
+            <li><a href="./runPayroll.html" class="logo_links">Run payroll</a></li>
+            <li><a href="#" class="logo_links">Settings</a></li>
+          </ul>
+         
+             </li> 
+  
+          <li>
+            <a href="#"  class="logo_links" >
+            <i data-feather="clock" stroke-width="1"></i>
+             <span>Time</span>
+            </a>
+            </li>
+            
+          <li>
+            <a href="#"  class="logo_links" >
+            <i data-feather="settings" stroke-width="1"></i>
+             <span>Settings</span> 
+            </a>
+            </li> 
+      </ul>
+   
+    </aside>
+
+<div class="main_content_wrapper">
+
+
+
+  <div class="container">
+    <h1>Other payroll options</h1>
+
+    <div class="container_wrapper">
+
+      <div class="div one">
+
+        <div class="for_icon">
+          <i data-feather="zap"></i>    
+        </div>
+    
+       <div class="wrap_text">
+      <h5>Off-cycle</h5>
+        <span>Run a payroll outside of your regular pay schedule.</span>
+      </div>
+
+       
+      <span class="run"><a href="./runPayroll.html">Run</a></i></span>
+
+      </div>
+
+      <div class="div two">
+
+        <div class="for_icon">
+          <i data-feather="gift"></i>    
+        </div>
+    
+       <div class="wrap_text">
+       <h5>Bonus ayroll</h5>
+      <span>Run a bonus cycle outside of your regular pay schedule.</span>
+      </div>
+
+      
+      <span class="run"><a href="./runPayroll.html">Run</a></i></span>
+
+      </div>
+
+      <div class="div three">
+
+      <div class="for_icon">
+        <i data-feather="refresh-cw"></i>    
+      </div>
+  
+      <div class="wrap_text">  
+      <h5>Termination</h5>
+      <span>This payroll will appear above afteran
+         mployee is dismissed.</span>
+      </div>
+
+      <span class="run"><a href="./runPayroll.html">Run</a></span>
+
+</div>
+    </div>
+  </div>
+
+  <div class="main_content">
+
+    <div class="wrap_headers">
+      <h1>Active Payrolls</h1>
+      <span>Completed payrolls(34)</span>
+    </div>
+
+
+   <div class="wrap_lists">
+
+    
+    <div class="wrap_h6">
+      <h6>pay cycle</h6>
+      <h6>payday</h6>
+      <h6>due date</h6>
+      <h6></h6>
+    </div>
+
+   <div class="wrap_main_lists">
+
+    <div class="wrap_pay_cycle">
+      <h5 class="date">May. 3 - 24</h5>
+      <span>All employees</span>
+    </div>
+
+    <h5 class="date">December 14</h5>
+
+    <h5 class="date">August 26</h5>
+
+
+  <div class="wrap_button">
+    <button class="payroll_btn">Run late Payroll</button>
+    <i data-feather="more-vertical"></i>    
+  </div>
+  
+
+   </div>
+
+
+   <div class="wrap_main_lists">
+
+    <div class="wrap_pay_cycle">
+      <h5 class="date">June. 4 - 28</h5>
+      <span>All employees</span>
+    </div>
+
+    <h5 class="date">July 2</h5>
+
+    <h5 class="date">September 23</h5>
+
+
+  <div class="wrap_button">
+    <button class="payroll_btn" style="background-color:#244DE114; color:#244DE1">Run Payroll</button>
+    <i data-feather="more-vertical"></i>    
+  </div>
+  
+
+   </div>
+
+
+   <div class="wrap_main_lists">
+
+    <div class="wrap_pay_cycle">
+      <h5 class="date">May. 3 - 24</h5>
+      <span>All employees</span>
+    </div>
+
+    <h5 class="date">February 4</h5>
+
+    <h5 class="date">March 5</h5>
+
+
+  <div class="wrap_button">
+    <button class="payroll_btn" style="background-color: #FAFAFA;color: #0D1426; border: 1px solid #05259914;">Review Payroll</button>
+    <i data-feather="more-vertical"></i>    
+  </div>
+  
+
+   </div>
+
+   </div>
+  </div>
+
+
+
+</div>
+
+
+</div>
+
+</main> 
+
+</body>
+<script src="/main.js" defer></script>
+<script src="https://unpkg.com/feather-icons"></script>
+</html>
