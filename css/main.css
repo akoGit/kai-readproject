@@ -1,5 +1,12 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500&family=Mukta:wght@400;500;600&family=Roboto:wght@300&display=swap");
+@font-face {
+  font-family: "SF Mono";
+  src: url("/assets/fonts/SF-Mono-Light.ttf") format("ttf");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -52,7 +59,7 @@ body {
           align-items: center;
   background-color: #f5f6f6;
   margin-top: 3em;
-  padding: 2em 15em;
+  padding: 2em 2em;
 }
 
 .main_content {
@@ -68,13 +75,15 @@ body {
           align-items: center;
   margin-top: 5rem;
   margin-bottom: 3rem;
+  margin-left: 5em;
+  margin-right: 5em;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 .main_content > .wrap_headers {
-  min-width: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,7 +100,7 @@ body {
   font-weight: bold;
 }
 .main_content > .wrap_lists {
-  min-width: 1044px;
+  width: 100%;
 }
 .main_content > .wrap_lists > .wrap_h6 {
   display: -webkit-box;
@@ -100,12 +109,12 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 850px;
+  width: 1044px;
 }
 .main_content > .wrap_lists > .wrap_h6 > h6 {
   color: #0D1426;
   opacity: 56%;
-  font-size: 14px;
+  font-size: 0.8rem;
   font-family: "Mukta", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
@@ -114,7 +123,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 70%;
+  max-width: 70%;
   text-align: left;
 }
 .main_content > .wrap_main_lists > h5 {
@@ -233,8 +242,6 @@ body {
   background-color: transparent;
 }
 .nav_right .wrapper .search-input {
-  width: 100%;
-  position: relative;
   border-radius: 8px;
   margin-right: 1em;
   width: 100%;
@@ -256,14 +263,12 @@ body {
 .search-input input {
   height: 55px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  width: 100%;
   outline: none;
   border: none;
   border-radius: 8px;
-  padding: 0 15px 0 30px;
-  font-size: 16px;
+  padding: 0 0.9rem 0 2rem;
+  font-size: 1rem;
   font-family: "Alegreya", serif;
-  font-size: 16px;
   color: #0d1426;
   font-weight: 500;
   background-color: transparent;
@@ -272,28 +277,33 @@ body {
   background-color: #FFFFFF;
 }
 .search-input input::-webkit-input-placeholder {
-  font-family: SF Mono;
-  font-size: 16px;
+  font-family: "SF Mono";
+  font-size: 1rem;
+  font-weight: 400;
   color: #0D1426;
 }
 .search-input input::-moz-placeholder {
-  font-family: SF Mono;
-  font-size: 16px;
+  font-family: "SF Mono";
+  font-size: 1rem;
+  font-weight: 400;
   color: #0D1426;
 }
 .search-input input:-ms-input-placeholder {
-  font-family: SF Mono;
-  font-size: 16px;
+  font-family: "SF Mono";
+  font-size: 1rem;
+  font-weight: 400;
   color: #0D1426;
 }
 .search-input input::-ms-input-placeholder {
-  font-family: SF Mono;
-  font-size: 16px;
+  font-family: "SF Mono";
+  font-size: 1rem;
+  font-weight: 400;
   color: #0D1426;
 }
 .search-input input::placeholder {
-  font-family: SF Mono;
-  font-size: 16px;
+  font-family: "SF Mono";
+  font-size: 1rem;
+  font-weight: 400;
   color: #0D1426;
 }
 .search-input > .feather.feather-x {
@@ -324,7 +334,7 @@ body {
   border-radius: 0 0 8px 8px;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   font-family: "Alegreya", serif;
-  font-size: 16px;
+  font-size: 1rem;
   color: #0d1426;
   font-weight: 500;
 }
@@ -344,12 +354,12 @@ body {
   border-radius: 8px 8px 0 0;
 }
 .search-input.activeSearch .autocom-box {
-  padding: 10px 8px;
+  padding: 0.6rem 0.5rem;
   background-color: #FFFFFF;
   opacity: 1;
-  pointer-events: auto;
+  pointer-events: none;
   position: absolute;
-  max-width: 450px !important;
+  width: 100% !important;
 }
 .search-input.activeSearch .autocom-box li {
   display: block;
@@ -357,13 +367,12 @@ body {
 
 .autocom-box li {
   list-style: none;
-  padding: 8px 15px;
+  padding: 0.4rem 0.8rem;
   display: none;
   cursor: pointer;
   min-width: 201px !important;
 }
 .autocom-box li:hover {
-  background-color: #f6f6f6;
   cursor: pointer;
   border-radius: 0;
 }
@@ -530,7 +539,9 @@ body {
 .div > .for_icon {
   border-radius: 50%;
   background-color: rgba(36, 77, 225, 0.0392156863);
-  width: 65px;
+  margin-right: 0.7em;
+  padding: 1em;
+  width: 56px;
   height: 56px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -545,39 +556,37 @@ body {
 }
 .div > .for_icon .feather {
   stroke: #244DE1;
-  stroke-width: 2;
-  width: 32px;
-  height: 32px;
-}
-.div > .wrap_text {
-  margin: 0 0.6rem;
+  width: 24px;
+  height: 24px;
 }
 .div > .wrap_text > h5 {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-family: "Mukta", sans-serif;
+  font-weight: 500;
   color: #0D1426;
 }
 .div > .wrap_text > span {
   font-family: "Alegreya", serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
+  letter-spacing: 0.1px;
   color: #0D1426;
   opacity: 56%;
+  max-width: 247px;
 }
 .div > .run {
   height: 44px;
   width: 78px;
-  padding: 10px;
+  padding: 0.625rem;
   -webkit-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-align: center;
-  text-decoration: none;
 }
 .div > .run > a {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   font-family: "Mukta", sans-serif;
   color: #0D1426;

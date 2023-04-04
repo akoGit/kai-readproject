@@ -1,4 +1,4 @@
-feather.replace()
+feather.replace();
 
 const logo_link = document.querySelector('.show_links')
 const logo_links_btn = document.querySelector('#logo_links_btn') 
