@@ -452,7 +452,7 @@ body {
   text-decoration: none;
   margin: 2rem 0;
   display: block;
-  padding: 0.5rem;
+  padding: 0.3rem;
   background-color: transparent;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -480,7 +480,7 @@ body {
   display: table;
 }
 .wrap_aside > ul > li > a > .feather {
-  margin-right: 1.5rem;
+  margin-right: 1.7rem;
   position: relative;
 }
 .wrap_aside > ul > li > a > .feather-chevron-up {
@@ -684,7 +684,7 @@ body {
 
 .user_dropdown {
   position: absolute;
-  top: 90px;
+  top: 56px;
   width: 224px;
   background-color: #FFFFFF;
   border-radius: 8px;
@@ -699,8 +699,9 @@ body {
   padding: 1em;
   text-align: center;
   border-radius: 8px;
-  -webkit-transition: background-color 0.2ms;
-  transition: background-color 0.2ms;
+  background-color: transparent;
+  -webkit-transition: background-color 0.3ms;
+  transition: background-color 0.3ms;
 }
 .user_dropdown .profile span {
   font-family: "Alegreya", serif;
@@ -712,6 +713,8 @@ body {
   margin-right: 10px;
 }
 .user_dropdown .profile:hover {
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
   background-color: #f6f6f6;
   cursor: pointer;
   border-radius: 0;
@@ -839,7 +842,7 @@ h1 {
   margin-right: 2em;
 }
 .hour_earnings_top > .hour_earnings_cards > .hour_card > .wrap_card_text {
-  text-align: center;
+  text-align: left;
   margin-left: 1rem;
 }
 .hour_earnings_top > .hour_earnings_cards > .hour_card > .wrap_card_text > span {
@@ -866,6 +869,13 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   cursor: pointer;
+  border-radius: 8px;
+  padding: 0.5em;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+.hour_earnings_top > .hour_earnings_cards > .hour_settings:hover {
+  background-color: #FFFFFF;
 }
 .hour_earnings_top > .hour_earnings_cards > .hour_settings > .feather.feather-settings {
   padding-right: 0.6em;
@@ -1229,9 +1239,20 @@ input[type=checkbox] {
   font-weight: 600;
   font-family: "Mukta", sans-serif;
   color: #0D1426;
+  position: relative;
+}
+.wrap_editable_sections > .wrap_both_sides > .wrap_number_input > .wrap_input_field > span::after {
+  content: "$";
+  position: absolute;
+  right: -18px;
+  top: -3px;
+  color: #0D1426;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Mukta", sans-serif;
 }
 .wrap_editable_sections > .wrap_both_sides > .wrap_number_input > .wrap_input_field > input[type=number] {
-  padding: 0.7em 0.5em;
+  padding: 0.7em 1em;
   color: #0D1426;
   font-size: 16px;
   font-weight: 500;
@@ -1295,6 +1316,25 @@ input[type=checkbox] {
   text-align: center;
   gap: 41px;
   padding: 10px;
+  position: relative;
+}
+.wrap_editable_sections > .wrap_both_sides > .wrap_right_side_input .for_number_input {
+  position: absolute;
+  left: 20px;
+  pointer-events: none;
+}
+.wrap_editable_sections > .wrap_both_sides > .wrap_right_side_input .for_number_input.two {
+  position: absolute;
+  left: 180px;
+}
+.wrap_editable_sections > .wrap_both_sides > .wrap_right_side_input .for_number_input.three {
+  position: absolute;
+  right: -43px;
+  top: 22px;
+  font-family: "Alegreya", serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #0D1426;
 }
 .wrap_editable_sections > .wrap_both_sides > .wrap_right_side_input > .chevron_down_button {
   display: -webkit-box;

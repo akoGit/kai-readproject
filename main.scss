@@ -430,9 +430,10 @@ body {
             text-decoration: none;
             margin: 2rem 0;
             display: block;
-            padding: .5rem;
+            padding: .3rem;
             background-color: transparent;
             transition: all .2s ease-in-out;
+
 
             &:hover {
                 background-color: white;
@@ -451,7 +452,6 @@ body {
                 display: flex;
                 position: relative;
                 width: 200px;
-
             }
 
 
@@ -460,7 +460,7 @@ body {
                 display: table;
 
                 >.feather {
-                    margin-right: 1.5rem;
+                    margin-right: 1.7rem;
                     position: relative;
                 }
 
@@ -685,7 +685,7 @@ body {
 
 .user_dropdown {
     position: absolute;
-    top: 90px;
+    top: 56px;
     width: 224px;
     background-color: $background-color_5;
     border-radius: 8px;
@@ -693,6 +693,7 @@ body {
     display: none;
 
     .profile {
+
         span {
             font-family: $font-family_2;
             font-size: 16px;
@@ -708,9 +709,11 @@ body {
         padding: 1em;
         text-align: center;
         border-radius: 8px;
-        transition: background-color .2ms;
+        background-color: transparent;
+        transition: background-color .3ms;
 
         &:hover {
+            transition: background-color .2s;
             background-color: $background-color_6;
             cursor: pointer;
             border-radius: 0;
@@ -821,7 +824,7 @@ h1 {
             margin-right: 2em;
 
             >.wrap_card_text {
-                text-align: center;
+                text-align: left;
                 margin-left: 1rem;
 
                 >span {
@@ -850,6 +853,14 @@ h1 {
             text-align: center;
             display: flex;
             cursor: pointer;
+            border-radius: 8px;
+            padding: .5em;
+            transition: background-color .2s linear;
+
+            &:hover {
+                background-color: #FFFFFF;
+
+            }
 
             >.feather.feather-settings {
                 padding-right: .6em;
@@ -1152,10 +1163,23 @@ input[type="checkbox"] {
                     font-weight: 600;
                     font-family: $font-family_1;
                     color: $color_1;
+                    position: relative;
+
+
+                    &::after {
+                        content: '$';
+                        position: absolute;
+                        right: -18px;
+                        top: -3px;
+                        color: $color_1;
+                        font-size: 16px;
+                        font-weight: 500;
+                        font-family: $font-family_1;
+                    }
                 }
 
                 >input[type="number"] {
-                    padding: .7em .5em;
+                    padding: .7em 1em;
                     color: $color_1;
                     font-size: 16px;
                     font-weight: 500;
@@ -1188,6 +1212,28 @@ input[type="checkbox"] {
             text-align: center;
             gap: 41px;
             padding: 10px;
+            position: relative;
+
+            .for_number_input {
+                position: absolute;
+                left: 20px;
+                pointer-events: none;
+            }
+
+            .for_number_input.two {
+                position: absolute;
+                left: 180px;
+            }
+
+            .for_number_input.three {
+                position: absolute;
+                right: -43px;
+                top: 22px;
+                font-family: $font-family_2;
+                font-weight: 500;
+                font-size: 18px;
+                color: #0D1426;
+            }
 
             >.chevron_down_button {
                 display: flex;
