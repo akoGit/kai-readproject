@@ -115,12 +115,19 @@ body {
                 font-family: $font-family_1;
                 font-weight: 500;
                 text-transform: uppercase;
+                margin-right: 9.5rem;
+                margin-left: 1rem;
+                white-space: nowrap;
 
+            }
+
+            .invisible {
+                visibility: hidden;
             }
 
             display: flex;
             justify-content: space-between;
-            width: 1044px
+            width: 1117px
         }
     }
 
@@ -128,10 +135,6 @@ body {
         display: flex;
         max-width: 70%;
         text-align: left;
-
-        >h5 {
-            text-align: left;
-        }
     }
 }
 
@@ -145,10 +148,23 @@ body {
     justify-content: space-between;
     background-color: $background-color_2;
     border-radius: 4px;
-    max-width: 1064px;
-    min-height: 80px;
     padding: 1rem;
     margin-top: 1rem;
+
+    .wrap_dates {
+        padding: 1em;
+        text-align: left;
+        width: 10%;
+
+        h5 {
+            width: 100%;
+            white-space: nowrap;
+            font-size: 18px;
+            font-weight: 500;
+            color: $color_1;
+            font-family: $font-family_1;
+        }
+    }
 
     >.wrap_button {
         display: flex;
@@ -176,7 +192,7 @@ body {
     }
 
     >.wrap_pay_cycle {
-        text-align: left;
+        // text-align: left;
 
         >.date {
             font-size: 18px;
@@ -190,13 +206,6 @@ body {
             font-size: 16px;
             opacity: 56%;
         }
-    }
-
-    >.date {
-        font-size: 18px;
-        font-weight: 500;
-        color: $color_1;
-        font-family: $font-family_1;
     }
 }
 
@@ -430,7 +439,7 @@ body {
             text-decoration: none;
             margin: 2rem 0;
             display: block;
-            padding: .3rem;
+            padding: .25rem;
             background-color: transparent;
             transition: all .2s ease-in-out;
 
@@ -450,8 +459,10 @@ body {
                 font-weight: 400;
                 color: $color_4;
                 display: flex;
+                align-items: center;
                 position: relative;
                 width: 200px;
+                min-height: 2rem;
             }
 
 
@@ -551,16 +562,11 @@ body {
         align-items: center;
         text-align: center;
 
-        .feather {
-            stroke: #244DE1;
-            width: 24px;
-            height: 24px;
-        }
     }
 
     >.wrap_text {
         >h5 {
-            font-size: 1.25rem;
+            font-size: clamp(1rem, 3vw, 1.25rem);
             font-family: $font-family_1;
             font-weight: 500;
             color: $color_1;
@@ -568,39 +574,61 @@ body {
 
         >span {
             font-family: $font-family_2;
-            font-size: 1rem;
+            font-size: clamp(.3rem, 2vw, 1rem);
             font-weight: 500;
             letter-spacing: 0.1px;
             color: $color_1;
             opacity: 56%;
+            word-break: break-word;
             max-width: 247px;
         }
     }
 
     >.run {
-        height: 44px;
-        width: 78px;
-        padding: .625rem;
+        height: 50%;
+        min-width: 15%;
         transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
         display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
+        margin-left: .3em;
+
+        &:hover {
+            .feather.feather-chevron-right {
+                opacity: 1;
+            }
+
+        }
 
         >a {
-            font-size: 1rem;
+            font-size: clamp(.8rem, 3vw, 1rem);
             font-weight: 500;
             font-family: $font-family_1;
             color: $color_1;
             transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
             display: flex;
             justify-content: center;
+            align-items: center;
             text-align: center;
             text-decoration: none;
+            padding: .625rem 1rem;
+
+            .feather.feather-chevron-right {
+                stroke-width: 2.5;
+                opacity: 0;
+                transition: opacity .2s;
+                margin-left: .3em;
+            }
+
+            &:hover {
+                color: #052599;
+            }
         }
 
         &:hover {
             background-color: $background-color_8;
             cursor: pointer;
-            color: $color_5;
         }
     }
 }
@@ -608,79 +636,15 @@ body {
 .div.one {
     grid-area: 1 / 1 / 3 / 3;
 
-    >.run {
-        position: relative;
-
-        &::before {
-            content: '›';
-            font-size: 24px;
-            color: $color_5;
-            position: absolute;
-            font-weight: bolder;
-            right: 8px;
-            top: 2px;
-            opacity: 0;
-            transition: opacity 0.2s linear;
-        }
-
-        &:hover {
-            &::before {
-                opacity: 1;
-            }
-        }
-    }
 }
 
 .div.two {
     grid-area: 1 / 3 / 3 / 5;
 
-    >.run {
-        position: relative;
-
-        &::before {
-            content: '›';
-            font-size: 24px;
-            color: $color_5;
-            position: absolute;
-            font-weight: bolder;
-            right: 8px;
-            top: 2px;
-            opacity: 0;
-            transition: opacity 0.2s linear;
-        }
-
-        &:hover {
-            &::before {
-                opacity: 1;
-            }
-        }
-    }
 }
 
 .div.three {
     grid-area: 3 / 1 / 5 / 3;
-
-    >.run {
-        position: relative;
-
-        &::before {
-            content: '›';
-            font-size: 24px;
-            color: $color_5;
-            position: absolute;
-            font-weight: bolder;
-            right: 8px;
-            top: 2px;
-            opacity: 0;
-            transition: opacity 0.2s linear;
-        }
-
-        &:hover {
-            &::before {
-                opacity: 1;
-            }
-        }
-    }
 }
 
 .user_dropdown {
@@ -716,7 +680,6 @@ body {
             transition: background-color .2s;
             background-color: $background-color_6;
             cursor: pointer;
-            border-radius: 0;
         }
     }
 }
@@ -1312,13 +1275,19 @@ footer {
             font-size: 14px;
             border-radius: 8px;
             padding: 1em 3em;
-            cursor: pointer;
+            cursor: not-allowed;
+
         }
 
         margin-right: 2em;
     }
 
     >.wrap_back_btn {
+        transition: background-color .2s linear;
+        border-radius: 8px;
+        // outline: 1px solid green;
+        cursor: pointer;
+
         >a {
             display: flex;
             justify-content: center;
@@ -1329,11 +1298,19 @@ footer {
             font-size: 14px;
             cursor: pointer;
             text-decoration: none;
+            padding: 1em 2em;
+            // outline: 1px solid red;
 
             >.feather.feather-arrow-left {
                 margin-right: .5em;
                 stroke: #000000;
+                width: 14;
+                height: 14;
             }
+        }
+
+        &:hover {
+            background-color: #f6f6f6;
         }
     }
 }
