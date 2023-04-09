@@ -641,8 +641,9 @@ body {
   word-break: break-word;
 }
 .div > .run {
-  height: 55%;
-  min-width: 15%;
+  height: 72%;
+  min-width: 12%;
+  border-radius: 4px;
   -webkit-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   display: -webkit-box;
