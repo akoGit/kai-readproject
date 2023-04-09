@@ -59,7 +59,7 @@ body {
 }
 
 .main_content {
-  max-width: 100%;
+  width: 76%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,8 +71,6 @@ body {
           align-items: center;
   margin-top: 5rem;
   margin-bottom: 3rem;
-  margin-left: 5em;
-  margin-right: 0em;
   padding: 1em 4em;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -106,7 +104,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 1117px;
 }
 .main_content > .wrap_lists > .wrap_h6 > h6 {
   color: #0D1426;
@@ -526,15 +523,15 @@ body {
 }
 
 .container {
-  margin-top: 2rem;
-  margin-left: 5em;
-  margin-right: 5em;
+  width: 76%;
+  padding: 2rem;
 }
 .container h1 {
   margin-bottom: 3rem;
 }
 
 .container_wrapper {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -543,13 +540,16 @@ body {
 }
 
 .div {
-  max-width: 504px;
+  max-width: 100%;
   min-height: 140px;
   border: 1px solid rgba(66, 88, 166, 0.0784313725);
   background-color: #FAFAFA;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding: 2em;
   border-radius: 4px;
 }
@@ -557,7 +557,6 @@ body {
   border-radius: 50%;
   background-color: rgba(36, 77, 225, 0.0392156863);
   margin-right: 0.7em;
-  padding: 1em;
   width: 56px;
   height: 56px;
   display: -webkit-box;
@@ -571,6 +570,16 @@ body {
           align-items: center;
   text-align: center;
 }
+.div > .wrap_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+}
 .div > .wrap_text > h5 {
   font-size: clamp(1rem, 3vw, 1.25rem);
   font-family: "Mukta", sans-serif;
@@ -579,16 +588,15 @@ body {
 }
 .div > .wrap_text > span {
   font-family: "Alegreya", serif;
-  font-size: clamp(0.3rem, 2vw, 1rem);
+  font-size: clamp(0.5rem, 2vw, 1rem);
   font-weight: 500;
   letter-spacing: 0.1px;
   color: #0D1426;
   opacity: 56%;
   word-break: break-word;
-  max-width: 247px;
 }
 .div > .run {
-  height: 50%;
+  height: 55%;
   min-width: 15%;
   -webkit-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -605,15 +613,21 @@ body {
   margin-left: 0.3em;
 }
 .div > .run:hover .feather.feather-chevron-right {
+  -webkit-transition: opacity 200ms, -webkit-transform 300ms;
+  transition: opacity 200ms, -webkit-transform 300ms;
+  transition: transform 300ms, opacity 200ms;
+  transition: transform 300ms, opacity 200ms, -webkit-transform 300ms;
   opacity: 1;
+  -webkit-transform: translateX(8px);
+          transform: translateX(8px);
 }
 .div > .run > a {
   font-size: clamp(0.8rem, 3vw, 1rem);
   font-weight: 500;
   font-family: "Mukta", sans-serif;
   color: #0D1426;
-  -webkit-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -626,16 +640,25 @@ body {
   text-align: center;
   text-decoration: none;
   padding: 0.625rem 1rem;
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
 }
 .div > .run > a .feather.feather-chevron-right {
+  -webkit-transition: opacity 200ms, -webkit-transform 300ms;
+  transition: opacity 200ms, -webkit-transform 300ms;
+  transition: transform 300ms, opacity 200ms;
+  transition: transform 300ms, opacity 200ms, -webkit-transform 300ms;
   stroke-width: 2.5;
   opacity: 0;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-  margin-left: 0.3em;
+  -webkit-transform: translateX(-8px);
+          transform: translateX(-8px);
 }
 .div > .run > a:hover {
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
   color: #052599;
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
 }
 .div > .run:hover {
   background-color: rgba(14, 33, 105, 0.0392156863);
