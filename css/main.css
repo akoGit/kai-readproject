@@ -228,7 +228,6 @@ body {
 }
 .nav_right > .wrapper {
   max-width: 450px;
-  margin-right: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,6 +238,41 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: transparent;
+}
+.nav_right > .wrapper .wrap_bell {
+  padding: 0.5em;
+  border-radius: 50%;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+  display: grid;
+  place-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.nav_right > .wrapper .wrap_bell::before {
+  content: attr(data-totalnotifs);
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  background-color: #0B1E63;
+  color: #FFFFFF;
+  font-size: 12px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.nav_right > .wrapper .wrap_bell:hover {
+  background-color: #FFFFFF;
 }
 .nav_right .wrapper .search-input {
   border-radius: 8px;
@@ -405,6 +439,15 @@ body {
   font-weight: 400;
 }
 
+.nav_accout {
+  border-radius: 8px;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+  padding: 0.5em 1em;
+}
+.nav_accout:hover {
+  background-color: #FFFFFF;
+}
 .nav_accout > .account_image {
   width: 40px;
   height: 40px;
@@ -537,6 +580,7 @@ body {
   grid-template-rows: repeat(4, 1fr);
   grid-column-gap: 3.5rem;
   grid-row-gap: 2rem;
+  padding: 1em;
 }
 
 .div {
@@ -585,6 +629,7 @@ body {
   font-family: "Mukta", sans-serif;
   font-weight: 500;
   color: #0D1426;
+  white-space: nowrap;
 }
 .div > .wrap_text > span {
   font-family: "Alegreya", serif;
@@ -708,6 +753,7 @@ body {
   margin-right: 10px;
 }
 .user_dropdown .profile:hover {
+  border-radius: 0px;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
   background-color: #f6f6f6;
@@ -719,7 +765,7 @@ body {
 }
 
 .hours_earnings {
-  max-width: 1200px;
+  width: 70%;
 }
 .hours_earnings > .hour_earnings_top {
   margin-bottom: 5em;
@@ -821,19 +867,19 @@ h1 {
           align-items: center;
 }
 .hour_earnings_top > .hour_earnings_cards > .hour_card {
-  max-width: 196px;
-  min-height: 6rem;
-  padding: 0 2em;
+  padding: 0.8em 1.5em;
   background-color: #FFFFFF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   border-radius: 8px;
   text-align: center;
-  margin-right: 2em;
 }
 .hour_earnings_top > .hour_earnings_cards > .hour_card > .wrap_card_text {
   text-align: left;
@@ -846,12 +892,14 @@ h1 {
   color: rgba(13, 20, 38, 0.7215686275);
   margin-bottom: 0.5rem;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 .hour_earnings_top > .hour_earnings_cards > .hour_card > .wrap_card_text > h5 {
   font-family: "Alegreya", serif;
   font-size: 20px;
   font-weight: 500;
   color: #0D1426;
+  white-space: nowrap;
 }
 .hour_earnings_top > .hour_earnings_cards > .hour_settings {
   font-size: 14px;
@@ -864,9 +912,10 @@ h1 {
   display: flex;
   cursor: pointer;
   border-radius: 8px;
-  padding: 0.5em;
+  padding: 1em;
   -webkit-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
+  white-space: nowrap;
 }
 .hour_earnings_top > .hour_earnings_cards > .hour_settings:hover {
   background-color: #FFFFFF;
@@ -1129,9 +1178,11 @@ input[type=checkbox] {
   padding-top: 2em;
   padding-bottom: 2em;
   display: none;
+  position: relative;
 }
 .editable_sections > .wrap_editable_sections > .editable_sections_dropdown > .plus_button.addRate {
-  padding-right: 5em;
+  position: absolute;
+  left: 18%;
 }
 .editable_sections > .wrap_editable_sections > .editable_sections_dropdown > .plus_button {
   display: -webkit-box;
@@ -1161,6 +1212,9 @@ input[type=checkbox] {
   display: flex;
 }
 
+.wrap_editable_sections {
+  margin-bottom: 1em;
+}
 .wrap_editable_sections > .wrap_both_sides {
   margin-top: 0.5em;
   display: -webkit-box;
@@ -1361,7 +1415,7 @@ input[type=checkbox] {
           align-items: center;
   border: 1px solid rgba(14, 33, 105, 0.08);
   border-radius: 6px;
-  padding: 1.3em 0.5em;
+  padding: 0.7em 0.5em;
 }
 .wrap_editable_sections > .wrap_both_sides > .wrap_right_side_input > input[type=number]::-webkit-input-placeholder {
   color: #0D1426;
@@ -1398,6 +1452,9 @@ input[type=number] {
   background-color: #FFFFFF;
   outline: none;
   border: none;
+  font-family: "Mukta", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
   -webkit-appearance: textfield;
           appearance: textfield;
   -moz-appearance: textfield;

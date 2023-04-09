@@ -38,14 +38,12 @@ let suggestions = [
 
 
 const featherX = document.querySelector('#featherX')
-console.log(featherX)
+
 const searchWrapper = document.querySelector(".search-input");
 const inputBox = searchWrapper.querySelector("#main_search");
 const suggBox = searchWrapper.querySelector(".autocom-box");
 
-// console.log(searchWrapper)
 inputBox.onkeyup = (e)=>{
-    console.log(e)
     let userData = e.target.value; 
     let emptyArray = [];
     if(userData){
@@ -60,9 +58,7 @@ inputBox.onkeyup = (e)=>{
         searchWrapper.classList.add("activeSearch"); 
         showSuggestions(emptyArray);
         main_page.addEventListener('click', () => {
-            searchWrapper.classList.remove("activeSearch")
-            // inputBox.value = ""
-          
+            searchWrapper.classList.remove("activeSearch")   
         })
 
         featherX.addEventListener('click', ()=> {
@@ -90,10 +86,9 @@ function showSuggestions(list){
     if(!list.length){
         userValue = inputBox.value;
         listData = `<li>${userValue}</li>`;
-     console.log('opened')
+
     }else{
       listData = list.join('');
-      console.log("closed")
     }
     suggBox.innerHTML = listData;
 
@@ -117,5 +112,4 @@ chevronButtonDown.addEventListener('click', ()=> {
     chevronButtonDown.classList.toggle('chevronSwitch')
     chevronDownSvg.classList.toggle('activateChevron')
 })
-
 
