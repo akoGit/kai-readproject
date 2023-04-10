@@ -469,6 +469,7 @@ body {
 }
 
 .wrap_aside {
+  z-index: 1;
   position: absolute;
   border-right: 1px solid rgba(14, 33, 105, 0.08);
   height: 120vh;
@@ -667,6 +668,13 @@ body {
   -webkit-transform: translateX(8px);
           transform: translateX(8px);
 }
+.div > .run:hover a {
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  color: #052599;
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
+}
 .div > .run > a {
   font-size: clamp(0.8rem, 3vw, 1rem);
   font-weight: 500;
@@ -698,13 +706,6 @@ body {
   opacity: 0;
   -webkit-transform: translateX(-8px);
           transform: translateX(-8px);
-}
-.div > .run > a:hover {
-  -webkit-transition: all 200ms;
-  transition: all 200ms;
-  color: #052599;
-  -webkit-transform: translateX(-5px);
-          transform: translateX(-5px);
 }
 .div > .run:hover {
   background-color: rgba(14, 33, 105, 0.0392156863);
@@ -765,9 +766,6 @@ body {
   display: block;
 }
 
-.hours_earnings {
-  width: 70%;
-}
 .hours_earnings > .hour_earnings_top {
   margin-bottom: 5em;
   display: -webkit-box;

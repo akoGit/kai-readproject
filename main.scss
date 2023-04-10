@@ -453,6 +453,7 @@ body {
 }
 
 .wrap_aside {
+    z-index: 1;
     position: absolute;
     border-right: 1px solid rgba(14, 33, 105, 0.08);
     height: 120vh;
@@ -647,6 +648,12 @@ body {
                 transform: translateX(8px);
             }
 
+            a {
+                transition: all 200ms;
+                color: #052599;
+                transform: translateX(-5px);
+            }
+
         }
 
         >a {
@@ -671,12 +678,12 @@ body {
                 transform: translateX(-8px);
             }
 
-            &:hover {
-                transition: all 200ms;
-                color: #052599;
-                transform: translateX(-5px);
+            // &:hover {
+            //     transition: all 200ms;
+            //     color: #052599;
+            //     transform: translateX(-5px);
 
-            }
+            // }
         }
 
         &:hover {
@@ -743,7 +750,7 @@ body {
 }
 
 .hours_earnings {
-    width: 70%;
+    // width: 70%;
 
     >.hour_earnings_top {
         margin-bottom: 5em;
