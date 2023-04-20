@@ -77,6 +77,11 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+@media (max-width: 1300px) {
+  .main_content {
+    width: 90%;
+  }
+}
 .main_content > .wrap_headers {
   width: 100%;
   display: -webkit-box;
@@ -98,6 +103,7 @@ body {
   width: 100%;
 }
 .main_content > .wrap_lists > .wrap_h6 {
+  margin-left: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,9 +118,8 @@ body {
   font-family: "Mukta", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
-  margin-right: 9.5rem;
-  margin-left: 1rem;
   white-space: nowrap;
+  width: 20%;
 }
 .main_content > .wrap_lists > .wrap_h6 .invisible {
   visibility: hidden;
@@ -573,6 +578,11 @@ body {
 .container h1 {
   margin-bottom: 3rem;
 }
+@media (max-width: 1300px) {
+  .container {
+    width: 90%;
+  }
+}
 
 .container_wrapper {
   width: 100%;
@@ -634,7 +644,7 @@ body {
 }
 .div > .wrap_text > span {
   font-family: "Alegreya", serif;
-  font-size: clamp(0.5rem, 2vw, 1rem);
+  font-size: clamp(0.5rem, 1.5vw, 1rem);
   font-weight: 500;
   letter-spacing: 0.1px;
   color: #0D1426;
@@ -642,7 +652,7 @@ body {
   word-break: break-word;
 }
 .div > .run {
-  height: 72%;
+  height: 62%;
   min-width: 12%;
   border-radius: 4px;
   -webkit-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -766,6 +776,9 @@ body {
   display: block;
 }
 
+.hours_earnings {
+  margin-inline: 5rem 5rem;
+}
 .hours_earnings > .hour_earnings_top {
   margin-bottom: 5em;
   display: -webkit-box;
@@ -1148,6 +1161,13 @@ input[type=checkbox] {
 }
 
 .editable_sections > .wrap_editable_sections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #FFFFFF;
   border: 1px solid rgba(14, 33, 105, 0.0784313725);
   border-radius: 10px;
@@ -1287,6 +1307,7 @@ input[type=checkbox] {
   font-family: "Mukta", sans-serif;
   color: #0D1426;
   position: relative;
+  white-space: nowrap;
 }
 .wrap_editable_sections > .wrap_both_sides > .wrap_number_input > .wrap_input_field > span::after {
   content: "$";
@@ -1396,6 +1417,7 @@ input[type=checkbox] {
   padding: 0.4em;
   background-color: rgba(14, 33, 105, 0.04);
   border-radius: 6px;
+  cursor: pointer;
 }
 .wrap_editable_sections > .wrap_both_sides > .wrap_right_side_input > .chevron_down_button.chevronSwitch {
   background-color: #0E2169;

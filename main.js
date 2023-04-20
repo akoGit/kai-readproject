@@ -113,3 +113,17 @@ chevronButtonDown.addEventListener('click', ()=> {
     chevronDownSvg.classList.toggle('activateChevron')
 })
 
+
+// const plusButton  = document.querySelector('.plus_button')
+
+
+// const editableShowSection = document.querySelector('.editable_sections_dropdown')
+// console.log(editableShowSection)
+// plusButton.addEventListener('click', () => {
+//     const div = document.createElement('div')
+//     editableShowSection.appendChild(div)
+
+//     div.innerHTML = '<div class="wrap_input_field" style="position:relative"><span>Sales Development Rep</span><input type="number" name="numberinput&quot;&quot;" id="nIpnut" class="number_input" placeholder=" 44/hr" onkeypress="if(this.value.length==8) return false;"></div>'
+//     // div.className = 'wrap_input_field'
+// }
+// )
