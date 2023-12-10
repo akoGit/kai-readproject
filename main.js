@@ -1,7 +1,7 @@
 feather.replace();
 
 const logo_link = document.querySelector('.show_links')
-const logo_links_btn = document.querySelector('#logo_links_btn') 
+const logo_links_btn = document.querySelector('#logo_links_btn')
 const chevron = document.querySelector('.wrap_aside ul li a .feather-chevron-up ')
 
 const feather_file = document.querySelector('.feather-file-text')
@@ -15,17 +15,16 @@ const main_page = document.querySelector('.main_wrapper')
 
 
 
-logo_links_btn.addEventListener('click', ()=> {
+logo_links_btn.addEventListener('click', () => {
     logo_link.classList.toggle('show')
     chevron.classList.toggle('active')
     feather_file.classList.toggle('strokeWidth')
 })
 
-chevron_down.addEventListener('click', ()=> {
+chevron_down.addEventListener('click', () => {
     user_dropDown.classList.toggle('showUserDropdown')
     chevron_down.classList.toggle('rotateChevron')
 })
-
 
 
 
@@ -43,52 +42,52 @@ const searchWrapper = document.querySelector(".search-input");
 const inputBox = searchWrapper.querySelector("#main_search");
 const suggBox = searchWrapper.querySelector(".autocom-box");
 
-inputBox.onkeyup = (e)=>{
-    let userData = e.target.value; 
+inputBox.onkeyup = (e) => {
+    let userData = e.target.value;
     let emptyArray = [];
-    if(userData){
-      
-        emptyArray = suggestions.filter((data)=>{
+    if (userData) {
+
+        emptyArray = suggestions.filter((data) => {
             return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
         });
-        emptyArray = emptyArray.map((data)=>{
-          
-            return data =  `<li>${data}</li>`;
+        emptyArray = emptyArray.map((data) => {
+
+            return data = `<li>${data}</li>`;
         });
-        searchWrapper.classList.add("activeSearch"); 
+        searchWrapper.classList.add("activeSearch");
         showSuggestions(emptyArray);
         main_page.addEventListener('click', () => {
-            searchWrapper.classList.remove("activeSearch")   
+            searchWrapper.classList.remove("activeSearch")
         })
 
-        featherX.addEventListener('click', ()=> {
+        featherX.addEventListener('click', () => {
             searchWrapper.classList.remove("activeSearch")
             inputBox.value = ""
         })
-    }else{
-        searchWrapper.classList.remove("activeSearch"); 
+    } else {
+        searchWrapper.classList.remove("activeSearch");
         main_page.addEventListener('click', () => {
             searchWrapper.classList.remove("activeSearch")
             // inputBox.value = ""
         })
-        featherX.addEventListener('click', ()=> {
+        featherX.addEventListener('click', () => {
             searchWrapper.classList.remove("activeSearch")
             inputBox.value = ""
         })
-    inputBox.value = ""
-       
+        inputBox.value = ""
+
     }
 }
 
 
-function showSuggestions(list){
+function showSuggestions(list) {
     let listData;
-    if(!list.length){
+    if (!list.length) {
         userValue = inputBox.value;
         listData = `<li>${userValue}</li>`;
 
-    }else{
-      listData = list.join('');
+    } else {
+        listData = list.join('');
     }
     suggBox.innerHTML = listData;
 
@@ -96,7 +95,7 @@ function showSuggestions(list){
 
 main_page.addEventListener('click', () => {
     user_dropDown.classList.remove('showUserDropdown')
-  
+
 })
 
 
@@ -107,23 +106,8 @@ const chevronButtonDown = document.querySelector('#chevron_button_down_')
 const chevronDownSvg = document.querySelector('[data-chevronColor]')
 
 
-chevronButtonDown.addEventListener('click', ()=> {
+chevronButtonDown.addEventListener('click', () => {
     sectionDropdown.classList.toggle('showSection')
     chevronButtonDown.classList.toggle('chevronSwitch')
     chevronDownSvg.classList.toggle('activateChevron')
 })
-
-
-// const plusButton  = document.querySelector('.plus_button')
-
-
-// const editableShowSection = document.querySelector('.editable_sections_dropdown')
-// console.log(editableShowSection)
-// plusButton.addEventListener('click', () => {
-//     const div = document.createElement('div')
-//     editableShowSection.appendChild(div)
-
-//     div.innerHTML = '<div class="wrap_input_field" style="position:relative"><span>Sales Development Rep</span><input type="number" name="numberinput&quot;&quot;" id="nIpnut" class="number_input" placeholder=" 44/hr" onkeypress="if(this.value.length==8) return false;"></div>'
-//     // div.className = 'wrap_input_field'
-// }
-// )

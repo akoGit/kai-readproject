@@ -1,332 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Document</title>
-</head>
-<body>
-    <main>
 
-        <header class="navbar">
-          <div class="logo">
-              <img src="/assets/imgs/Payday.png" alt="logo">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <main>
+
+    <header class="navbar">
+      <div class="logo">
+        <img src="/assets/imgs/Payday.png" alt="logo">
+      </div>
+
+      <div class="nav_right">
+
+
+
+        <div class="wrapper">
+          <div class='search-input'>
+
+            <input type='search' placeholder='Search' id="main_search">
+            <i data-feather="x" id="featherX"></i>
+            <div class="autocom-box">
+              <li>john</li>
+              <li>james</li>
+              <li>jamal </li>
+            </div>
+            <div class='icon'><i data-feather="search"></i></div>
           </div>
-      
-          <div class="nav_right">
-      
-      
-      
-            <div class="wrapper">
-                <div class='search-input'>
-          
-                  <input type='search' placeholder='Search' id="main_search">
-                  <i data-feather="x" id="featherX"></i>
-                     <div class="autocom-box">
-                          <li>john</li>
-                          <li>james</li>
-                          <li>jamal </li>
-                       </div>
-                  <div class='icon'><i data-feather="search"></i></div>
-                </div>
-                <div class="wrap_bell" data-totalnotifs="4">
-                <i data-feather="bell" stroke-width="1.5" width='24' height='24'></i> 
-              </div>
-              </div>
-      
-        
-      
-             <div class="nav_accout">
-              <img class='account_image' src="/assets/imgs/profile_asset.png" alt="profile image">
-              <div class="wrap_name">
-                  <span class="name">Julia Hartmann</span>
-                  <span class="position">Admin &#x22C5; Baumbach and Sons </span>
-              </div>
-      
-             
-      
-              <i data-feather="chevron-down" data-dropdown-button></i>
-      
-              <div class="user_dropdown" data-dropdown>
-                   <div class="profile"> 
-                    <i data-feather="user" ></i>
-                    <span>User profile</span>
-                    </div>
-                   <div class="profile"> 
-                    <i data-feather="settings" ></i>
-                    <span>Settings</span>
-                    </div>
-                   <div class="profile"> 
-                    <i data-feather="log-out" ></i>
-                    <span>Log out</span>
-                    </div>
-              </div>
-      
-             </div>
-             
-      
-      
-      
+          <div class="wrap_bell" data-totalnotifs="4">
+            <i data-feather="bell" stroke-width="1.5" width='24' height='24'></i>
           </div>
-        </header>
-      
-      
-        <div class="main_wrapper">
-      
-          <aside class="wrap_aside">
-            <ul>
-                <li>
-                  <a href="/index.html" class="logo_links" >
-                  <i data-feather="home" stroke-width="1"></i>
-                  <span>Home</span>
-                </a>
-                </li>
-        
-                <li><a href="#"  class="logo_links" >
-                  <i data-feather="briefcase" stroke-width="1"></i>
-                 <span>Banking</span>
-                </a>
-              </li>
-        
-                <li><a href="#"  class="logo_links" >
-                  <i data-feather="users" stroke-width="1"></i>
-                  <span>People</span>
-                </a></li>
-        
-                <li>
-                  <a href="#"  class="logo_links" id="logo_links_btn">
-                  <i data-feather="file-text" stroke-width="1" data-feather></i>
-                  <span>Payroll</span>
-                  <i data-feather="chevron-up" stroke-width="1" class="chevron-up"></i>
-                </a> 
-                <ul  class="show_links"  id="logo_links_show">
-                  <li><a href="./runPayroll.html" class="logo_links">Run payroll</a></li>
-                  <li><a href="#" class="logo_links">Settings</a></li>
-                </ul>
-               
-                   </li> 
-        
-                <li>
-                  <a href="#"  class="logo_links" >
-                  <i data-feather="clock" stroke-width="1"></i>
-                   <span>Time</span>
-                  </a>
-                  </li>
-                  
-                <li>
-                  <a href="#"  class="logo_links" >
-                  <i data-feather="settings" stroke-width="1"></i>
-                   <span>Settings</span> 
-                  </a>
-                  </li> 
-            </ul>
-         
-          </aside>
-      
+        </div>
+
+
+
+        <div class="nav_accout">
+          <img class='account_image' src="/assets/imgs/profile_asset.png" alt="profile image">
+          <div class="wrap_name">
+            <span class="name">Julia Hartmann</span>
+            <span class="position">Admin &#x22C5; Baumbach and Sons </span>
+          </div>
+
+
+
+          <i data-feather="chevron-down" data-dropdown-button></i>
+
+          <div class="user_dropdown" data-dropdown>
+            <div class="profile">
+              <i data-feather="user"></i>
+              <span>User profile</span>
+            </div>
+            <div class="profile">
+              <i data-feather="settings"></i>
+              <span>Settings</span>
+            </div>
+            <div class="profile">
+              <i data-feather="log-out"></i>
+              <span>Log out</span>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+    </header>
+    <aside class="wrap_aside">
+      <ul>
+        <li>
+          <a href="/index.html" class="logo_links">
+            <i data-feather="home" stroke-width="1"></i>
+            <span>Home</span>
+          </a>
+        </li>
+
+        <li><a href="#" class="logo_links">
+            <i data-feather="briefcase" stroke-width="1"></i>
+            <span>Banking</span>
+          </a>
+        </li>
+
+        <li><a href="#" class="logo_links">
+            <i data-feather="users" stroke-width="1"></i>
+            <span>People</span>
+          </a></li>
+
+        <li>
+          <a href="#" class="logo_links" id="logo_links_btn">
+            <i data-feather="file-text" stroke-width="1" data-feather></i>
+            <span>Payroll</span>
+            <i data-feather="chevron-up" stroke-width="1" class="chevron-up"></i>
+          </a>
+          <ul class="show_links" id="logo_links_show">
+            <li><a href="./runPayroll.html" class="logo_links">Run payroll</a></li>
+            <li><a href="#" class="logo_links">Settings</a></li>
+          </ul>
+
+        </li>
+
+        <li>
+          <a href="#" class="logo_links">
+            <i data-feather="clock" stroke-width="1"></i>
+            <span>Time</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="logo_links">
+            <i data-feather="settings" stroke-width="1"></i>
+            <span>Settings</span>
+          </a>
+        </li>
+      </ul>
+
+    </aside>
+
+
+    <div class="main_wrapper">
+
+
+
       <div class="main_content_wrapper">
-      
-      
-         
+
+
+
         <div class="hours_earnings">
-      
-      
+
+
           <section class='hour_earnings_top'>
-         <h1>Hours & Earnings</h1>
-          <div class="bar">
-                <div class="bar_ first"></div>
-                <div class="bar_"></div>
-                <div class="bar_"></div>
-          </div>
-      
-          <div class="earnings_wrapper">
-            <div class="wrap_steps"><span class="num">1</span> Hours & Earnings</div> <span class="dot">&#x22C5;</span>
-            <div class="wrap_steps step_two"><span class="num">2</span> Review </div>  <span class="dot">&#x22C5;</span>
-            <div class="wrap_steps step_three"><span class="num">3</span> Confirmation</div>
-          </div>
-      
-      
-          <div class="hour_earnings_cards">
-            <div class="hour_card"> <i data-feather="clock"></i> <div class="wrap_card_text"> <span>pey period</span> <h5>Feb 1-28</h5></div> </div>
-            <div class="hour_card"> <i data-feather="calendar"></i> <div class="wrap_card_text"> <span>due date</span> <h5>March 3</h5></div> </div>
-            <div class="hour_card"> <i data-feather="table"></i> <div class="wrap_card_text"> <span>pey day</span> <h5>March 5</h5></div> </div>
-            <div class="hour_card"> <i data-feather="dollar-sign"></i> <div class="wrap_card_text"> <span>total</span> <h5>$85,246</h5></div> </div>
-       
+            <h1>Hours & Earnings</h1>
+            <div class="bar">
+              <div class="bar_ first"></div>
+              <div class="bar_"></div>
+              <div class="bar_"></div>
+            </div>
+
+            <div class="earnings_wrapper">
+              <div class="wrap_steps"><span class="num">1</span> Hours & Earnings</div> <span
+                class="dot">&#x22C5;</span>
+              <div class="wrap_steps step_two"><span class="num">2</span> Review </div> <span
+                class="dot">&#x22C5;</span>
+              <div class="wrap_steps step_three"><span class="num">3</span> Confirmation</div>
+            </div>
+
+
+            <div class="hour_earnings_cards">
+              <div class="hour_card"> <i data-feather="clock"></i>
+                <div class="wrap_card_text"> <span>pey period</span>
+                  <h5>Feb 1-28</h5>
+                </div>
+              </div>
+              <div class="hour_card"> <i data-feather="calendar"></i>
+                <div class="wrap_card_text"> <span>due date</span>
+                  <h5>March 3</h5>
+                </div>
+              </div>
+              <div class="hour_card"> <i data-feather="table"></i>
+                <div class="wrap_card_text"> <span>pey day</span>
+                  <h5>March 5</h5>
+                </div>
+              </div>
+              <div class="hour_card"> <i data-feather="dollar-sign"></i>
+                <div class="wrap_card_text"> <span>total</span>
+                  <h5>$85,246</h5>
+                </div>
+              </div>
+
               <div class="hour_settings">
                 <i data-feather="settings"></i> Play run settings
               </div>
-           </div>
-      
+            </div>
+
           </section>
-      
-      
-      
+
+
+
           <section class="section_title">
-      
+
             <div class="wrap_section_title">
               <h1>Section title</h1>
-              
+
               <div class="wrap_search_filter">
-                
-                  <i data-feather="search"></i> 
-                  <input type="search" name="search" id="forSearch" placeholder="Search" class="search_bar">
-              
-       
-      
-              <div class="filter_wrapp">
-                <i data-feather="filter"></i> Filter
+
+                <i data-feather="search"></i>
+                <input type="search" name="search" id="forSearch" placeholder="Search" class="search_bar">
+
+
+
+                <div class="filter_wrapp">
+                  <i data-feather="filter"></i> Filter
+                </div>
+
               </div>
-      
-              </div>
-      
+
             </div>
-      
+
           </section>
-      
-      
+
+
           <section class="main_section">
-      
-           <div class="wrap_main_sec">
-      
-      <div class="wrap_left_side"> 
-            <div class="wrap_check_box">
-              <input type="checkbox" id="checkbox">
-              <span for="checkbox"> NAME </span>
-            </div>
-           
-            <div class="wrap_position">
-              <span>position</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <g opacity="0.56">
-                <path d="M4.19329 9.52667L3.99996 9.72667V4.66667C3.99996 4.48986 3.92972 4.32029 3.8047 4.19526C3.67967 4.07024 3.51011 4 3.33329 4C3.15648 4 2.98691 4.07024 2.86189 4.19526C2.73687 4.32029 2.66663 4.48986 2.66663 4.66667V9.72667L2.47329 9.52667C2.34776 9.40113 2.1775 9.33061 1.99996 9.33061C1.82243 9.33061 1.65216 9.40113 1.52663 9.52667C1.40109 9.6522 1.33057 9.82247 1.33057 10C1.33057 10.1775 1.40109 10.3478 1.52663 10.4733L2.85996 11.8067C2.92336 11.8674 2.99813 11.9149 3.07996 11.9467C3.15976 11.9819 3.24605 12.0002 3.33329 12.0002C3.42054 12.0002 3.50683 11.9819 3.58663 11.9467C3.66846 11.9149 3.74322 11.8674 3.80663 11.8067L5.13996 10.4733C5.20212 10.4112 5.25143 10.3374 5.28507 10.2562C5.31871 10.175 5.33602 10.0879 5.33602 10C5.33602 9.91209 5.31871 9.82505 5.28507 9.74383C5.25143 9.66262 5.20212 9.58883 5.13996 9.52667C5.0778 9.46451 5.00401 9.4152 4.92279 9.38156C4.84158 9.34792 4.75453 9.33061 4.66663 9.33061C4.57872 9.33061 4.49168 9.34792 4.41046 9.38156C4.32925 9.4152 4.25545 9.46451 4.19329 9.52667ZM7.33329 5.33333H14C14.1768 5.33333 14.3463 5.2631 14.4714 5.13807C14.5964 5.01305 14.6666 4.84348 14.6666 4.66667C14.6666 4.48986 14.5964 4.32029 14.4714 4.19526C14.3463 4.07024 14.1768 4 14 4H7.33329C7.15648 4 6.98691 4.07024 6.86189 4.19526C6.73687 4.32029 6.66663 4.48986 6.66663 4.66667C6.66663 4.84348 6.73687 5.01305 6.86189 5.13807C6.98691 5.2631 7.15648 5.33333 7.33329 5.33333ZM14 7.33333H7.33329C7.15648 7.33333 6.98691 7.40357 6.86189 7.5286C6.73687 7.65362 6.66663 7.82319 6.66663 8C6.66663 8.17681 6.73687 8.34638 6.86189 8.4714C6.98691 8.59643 7.15648 8.66667 7.33329 8.66667H14C14.1768 8.66667 14.3463 8.59643 14.4714 8.4714C14.5964 8.34638 14.6666 8.17681 14.6666 8C14.6666 7.82319 14.5964 7.65362 14.4714 7.5286C14.3463 7.40357 14.1768 7.33333 14 7.33333ZM14 10.6667H7.33329C7.15648 10.6667 6.98691 10.7369 6.86189 10.8619C6.73687 10.987 6.66663 11.1565 6.66663 11.3333C6.66663 11.5101 6.73687 11.6797 6.86189 11.8047C6.98691 11.9298 7.15648 12 7.33329 12H14C14.1768 12 14.3463 11.9298 14.4714 11.8047C14.5964 11.6797 14.6666 11.5101 14.6666 11.3333C14.6666 11.1565 14.5964 10.987 14.4714 10.8619C14.3463 10.7369 14.1768 10.6667 14 10.6667Z" fill="#0D1426"/>
-                </g>
-                </svg>
-            </div>
-          </div>
-      
-      
-          <div class="wrap_right_side">
-      
-            <span>hours & ot</span>
-            <span>more earnings</span>
-            <span>time off</span>
-            <span>gross earnings </span>
-      
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <g opacity="0.56">
-              <path d="M11.8067 7.52667L8.47338 4.19333C8.40997 4.13264 8.33521 4.08506 8.25338 4.05333C8.09107 3.98665 7.90902 3.98665 7.74671 4.05333C7.66487 4.08506 7.59011 4.13264 7.52671 4.19333L4.19338 7.52667C4.13122 7.58882 4.08191 7.66262 4.04827 7.74383C4.01463 7.82505 3.99731 7.91209 3.99731 8C3.99731 8.17753 4.06784 8.3478 4.19338 8.47333C4.31891 8.59887 4.48917 8.66939 4.66671 8.66939C4.84424 8.66939 5.01451 8.59887 5.14004 8.47333L7.33338 6.27333V11.3333C7.33338 11.5101 7.40361 11.6797 7.52864 11.8047C7.65366 11.9298 7.82323 12 8.00004 12C8.17685 12 8.34642 11.9298 8.47145 11.8047C8.59647 11.6797 8.66671 11.5101 8.66671 11.3333V6.27333L10.86 8.47333C10.922 8.53582 10.9958 8.58541 11.077 8.61926C11.1582 8.65311 11.2454 8.67053 11.3334 8.67053C11.4214 8.67053 11.5085 8.65311 11.5898 8.61926C11.671 8.58541 11.7447 8.53582 11.8067 8.47333C11.8692 8.41136 11.9188 8.33762 11.9526 8.25638C11.9865 8.17514 12.0039 8.08801 12.0039 8C12.0039 7.91199 11.9865 7.82485 11.9526 7.74361C11.9188 7.66237 11.8692 7.58864 11.8067 7.52667Z" fill="#0D1426"/>
-              </g>
-              </svg>
-          </div>
-      
-      
-      
-           
-           </div> 
-      
-          </section>
-      
-      
-      
-          <section class="editable_sections">
-              <div class="wrap_editable_sections">
-      
-                <div class="wrap_both_sides">
-            <div class="wrap_number_input">
-              <div class="wrap_check_box">
-                <input type="checkbox" id="cB1">
-                <label for="cB1">Rajeev Behera</label>
+
+            <div class="wrap_main_sec">
+
+              <div class="wrap_left_side">
+                <div class="wrap_check_box">
+                  <input type="checkbox" id="checkbox">
+                  <span for="checkbox"> NAME </span>
+                </div>
+
+                <div class="wrap_position">
+                  <span>position</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <g opacity="0.56">
+                      <path
+                        d="M4.19329 9.52667L3.99996 9.72667V4.66667C3.99996 4.48986 3.92972 4.32029 3.8047 4.19526C3.67967 4.07024 3.51011 4 3.33329 4C3.15648 4 2.98691 4.07024 2.86189 4.19526C2.73687 4.32029 2.66663 4.48986 2.66663 4.66667V9.72667L2.47329 9.52667C2.34776 9.40113 2.1775 9.33061 1.99996 9.33061C1.82243 9.33061 1.65216 9.40113 1.52663 9.52667C1.40109 9.6522 1.33057 9.82247 1.33057 10C1.33057 10.1775 1.40109 10.3478 1.52663 10.4733L2.85996 11.8067C2.92336 11.8674 2.99813 11.9149 3.07996 11.9467C3.15976 11.9819 3.24605 12.0002 3.33329 12.0002C3.42054 12.0002 3.50683 11.9819 3.58663 11.9467C3.66846 11.9149 3.74322 11.8674 3.80663 11.8067L5.13996 10.4733C5.20212 10.4112 5.25143 10.3374 5.28507 10.2562C5.31871 10.175 5.33602 10.0879 5.33602 10C5.33602 9.91209 5.31871 9.82505 5.28507 9.74383C5.25143 9.66262 5.20212 9.58883 5.13996 9.52667C5.0778 9.46451 5.00401 9.4152 4.92279 9.38156C4.84158 9.34792 4.75453 9.33061 4.66663 9.33061C4.57872 9.33061 4.49168 9.34792 4.41046 9.38156C4.32925 9.4152 4.25545 9.46451 4.19329 9.52667ZM7.33329 5.33333H14C14.1768 5.33333 14.3463 5.2631 14.4714 5.13807C14.5964 5.01305 14.6666 4.84348 14.6666 4.66667C14.6666 4.48986 14.5964 4.32029 14.4714 4.19526C14.3463 4.07024 14.1768 4 14 4H7.33329C7.15648 4 6.98691 4.07024 6.86189 4.19526C6.73687 4.32029 6.66663 4.48986 6.66663 4.66667C6.66663 4.84348 6.73687 5.01305 6.86189 5.13807C6.98691 5.2631 7.15648 5.33333 7.33329 5.33333ZM14 7.33333H7.33329C7.15648 7.33333 6.98691 7.40357 6.86189 7.5286C6.73687 7.65362 6.66663 7.82319 6.66663 8C6.66663 8.17681 6.73687 8.34638 6.86189 8.4714C6.98691 8.59643 7.15648 8.66667 7.33329 8.66667H14C14.1768 8.66667 14.3463 8.59643 14.4714 8.4714C14.5964 8.34638 14.6666 8.17681 14.6666 8C14.6666 7.82319 14.5964 7.65362 14.4714 7.5286C14.3463 7.40357 14.1768 7.33333 14 7.33333ZM14 10.6667H7.33329C7.15648 10.6667 6.98691 10.7369 6.86189 10.8619C6.73687 10.987 6.66663 11.1565 6.66663 11.3333C6.66663 11.5101 6.73687 11.6797 6.86189 11.8047C6.98691 11.9298 7.15648 12 7.33329 12H14C14.1768 12 14.3463 11.9298 14.4714 11.8047C14.5964 11.6797 14.6666 11.5101 14.6666 11.3333C14.6666 11.1565 14.5964 10.987 14.4714 10.8619C14.3463 10.7369 14.1768 10.6667 14 10.6667Z"
+                        fill="#0D1426" />
+                    </g>
+                  </svg>
+                </div>
               </div>
-        
-        
-          <div class="wrap_input_field">
-            <span>Sales Development Rep</span>
-            <input type="number" name=numberinput"" id="nIpnut" class="number_input" placeholder=" 44/hr" onKeyPress="if(this.value.length==8) return false;">
-          </div>
+
+
+              <div class="wrap_right_side">
+
+                <span>hours & ot</span>
+                <span>more earnings</span>
+                <span>time off</span>
+                <span>gross earnings </span>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <g opacity="0.56">
+                    <path
+                      d="M11.8067 7.52667L8.47338 4.19333C8.40997 4.13264 8.33521 4.08506 8.25338 4.05333C8.09107 3.98665 7.90902 3.98665 7.74671 4.05333C7.66487 4.08506 7.59011 4.13264 7.52671 4.19333L4.19338 7.52667C4.13122 7.58882 4.08191 7.66262 4.04827 7.74383C4.01463 7.82505 3.99731 7.91209 3.99731 8C3.99731 8.17753 4.06784 8.3478 4.19338 8.47333C4.31891 8.59887 4.48917 8.66939 4.66671 8.66939C4.84424 8.66939 5.01451 8.59887 5.14004 8.47333L7.33338 6.27333V11.3333C7.33338 11.5101 7.40361 11.6797 7.52864 11.8047C7.65366 11.9298 7.82323 12 8.00004 12C8.17685 12 8.34642 11.9298 8.47145 11.8047C8.59647 11.6797 8.66671 11.5101 8.66671 11.3333V6.27333L10.86 8.47333C10.922 8.53582 10.9958 8.58541 11.077 8.61926C11.1582 8.65311 11.2454 8.67053 11.3334 8.67053C11.4214 8.67053 11.5085 8.65311 11.5898 8.61926C11.671 8.58541 11.7447 8.53582 11.8067 8.47333C11.8692 8.41136 11.9188 8.33762 11.9526 8.25638C11.9865 8.17514 12.0039 8.08801 12.0039 8C12.0039 7.91199 11.9865 7.82485 11.9526 7.74361C11.9188 7.66237 11.8692 7.58864 11.8067 7.52667Z"
+                      fill="#0D1426" />
+                  </g>
+                </svg>
+              </div>
+
+
+
+
             </div>
-      
-      
-         <div class="wrap_right_side_input">
-             <label  class="for_number_input">$</label>
-            <input type="number" name=numberinput"" id="nIpnut" class="number_input" placeholder="80.00" onKeyPress="if(this.value.length==8) return false;">
-            <label  class="for_number_input two">$</label>
-            <input type="number" name=numberinput"" id="nIpnut" class="number_input" placeholder="20.00" onKeyPress="if(this.value.length==8) return false;" >
-            <label  class="for_number_input three">hrs</label>
-            <input type="number" name=numberinput"" id="nIpnut" class="number_input" placeholder=" 20.00" onKeyPress="if(this.value.length==8) return false;"> 
-        
-            <span class="total_earnings">$7,423.15</span>
-      
-            <div class="chevron_down_button" id="chevron_button_down_">
-              <i data-feather="chevron-down" data-chevronColor></i>
+
+          </section>
+
+
+
+          <section class="editable_sections">
+            <div class="wrap_editable_sections">
+
+              <div class="wrap_both_sides">
+                <div class="wrap_number_input">
+                  <div class="wrap_check_box">
+                    <input type="checkbox" id="cB1">
+                    <label for="cB1">Rajeev Behera</label>
+                  </div>
+
+
+                  <div class="wrap_input_field">
+                    <span>Sales Development Rep</span>
+                    <input type="number" name=numberinput"" id="nIpnut" class="number_input" placeholder=" 44/hr"
+                      onKeyPress="if(this.value.length==8) return false;">
+                  </div>
+                </div>
+
+
+                <div class="wrap_right_side_input">
+                  <label class="for_number_input">$</label>
+                  <input type="number" name=numberinput"" id="nIpnut" class="number_input" placeholder="80.00"
+                    onKeyPress="if(this.value.length==8) return false;">
+                  <label class="for_number_input two">$</label>
+                  <input type="number" name=numberinput"" id="nIpnut" class="number_input" placeholder="20.00"
+                    onKeyPress="if(this.value.length==8) return false;">
+                  <label class="for_number_input three">hrs</label>
+                  <input type="number" name=numberinput"" id="nIpnut" class="number_input" placeholder=" 20.00"
+                    onKeyPress="if(this.value.length==8) return false;">
+
+                  <span class="total_earnings">$7,423.15</span>
+
+                  <div class="chevron_down_button" id="chevron_button_down_">
+                    <i data-feather="chevron-down" data-chevronColor></i>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="editable_sections_dropdown" data-editable="editable-section">
+
+                <div class="plus_button addRate">
+                  <i data-feather="plus-circle"></i> Add rate
+                </div>
+                <div class="plus_button">
+                  <i data-feather="plus-circle"></i> Add OT
+                </div>
+                <div class="plus_button">
+                  <i data-feather="plus-circle"></i> Add more
+                </div>
+
+                <span class="plus_button balanc"> Balance: 20 hrs</span>
+
+                <div class="plus_button">
+                  <i data-feather="plus-circle"></i> Reimbursement
+                </div>
+              </div>
+
             </div>
-         </div>
-      
+
+
+
+
+            <!--  -->
+
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
       </div>
-      
-         <div class="editable_sections_dropdown" data-editable="editable-section">
-          
-          <div class="plus_button addRate">
-            <i data-feather="plus-circle" ></i> Add rate
-          </div>
-          <div class="plus_button">
-            <i data-feather="plus-circle"></i> Add OT
-          </div>
-          <div class="plus_button">
-            <i data-feather="plus-circle"></i> Add more
-          </div>
-      
-          <span class="plus_button balanc"> Balance: 20 hrs</span>
-      
-          <div class="plus_button">
-            <i data-feather="plus-circle"></i> Reimbursement
-          </div>
-        </div>
-      
-        </div>
 
 
-
-        <!--  -->
-
-      
-        </section>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-        </div>
-      
-      
-      </div>
-      
-      
       <footer>
         <div class="wrap_back_btn">
-            <a href="./index.html"> <i data-feather="arrow-left"></i> Back</a>
+          <a href="./index.html"> <i data-feather="arrow-left"></i> Back</a>
         </div>
         <div class="save_btn"><span>Save</span></div>
       </footer>
-      
-      
-      
-      </div>
-      
-      </main> 
-      
+
+
+
+    </div>
+
+  </main>
+
 </body>
 <script src="/main.js" defer>feather.replace(); </script>
 <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
 </html>

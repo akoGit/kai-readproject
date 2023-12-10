@@ -1,59 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500&family=Mukta:wght@400;500;600&family=Roboto:wght@300&display=swap');
+@import 'variables';
 
-@font-face {
-    font-family: 'SF Mono';
-    src:
-        url('/assets/fonts/SF-Mono-Light.ttf') format('ttf');
-    font-weight: 400;
-    font-display: swap;
-    font-style: normal;
-}
+@import 'base';
 
-$color_1: #0D1426;
-$color_2: #FCFCFC;
-$color_3: #0d1426;
-$color_4: #0b1e63;
-$color_5: #052599;
-$color_6: #0E2169;
-$color_7: #0B1E63;
-$color_8: #0D1426B8;
-$color_9: rgba(14, 33, 105, 0.24);
-$font-family_1: "Mukta", sans-serif;
-$font-family_2: "Alegreya", serif;
-$font-family_3: 'SF Mono';
-$background-color_1: #f5f6f6;
-$background-color_2: #FAFAFA;
-$background-color_3: #244DE1;
-$background-color_4: transparent;
-$background-color_5: #FFFFFF;
-$background-color_6: #f6f6f6;
-$background-color_7: #244DE10A;
-$background-color_8: #0E21690A;
-$background-color_9: #0E216914;
-$background-color_10: #0E2169;
-$background-color_11: rgba(14, 33, 105, 0.04);
-$background-color_12: #0E216905;
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    outline: none;
-
-    &::before {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        outline: none;
-    }
-
-    &::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        outline: none;
-    }
-}
 
 body {
     min-height: 100vh;
@@ -63,36 +12,37 @@ body {
 
 .main_wrapper {
     display: flex;
-    max-width: 100vw;
+    justify-content: center;
+    align-items: center;
 }
 
 .main_content_wrapper {
-    width: 100dvw;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
     background-color: $background-color_1;
-    margin-top: 3em;
     padding: 2em 2em;
+    margin-left: 5rem;
+    margin-top: 5rem;
 }
 
 .main_content {
-    width: 76%;
+    max-width: 90rem;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 5rem;
     margin-bottom: 3rem;
-    padding: 1em 4em;
+    // padding: 1em 4em;
     flex-direction: column;
-
-    @media (max-width: 1300px) {
-        width: 90%;
-    }
 
     >.wrap_headers {
         width: 100%;
+        // padding: 0 2rem;
         display: flex;
+        justify-content: center;
+        align-items: center;
         margin-bottom: 3rem;
         justify-content: space-between;
 
@@ -114,12 +64,12 @@ body {
             >h6 {
                 color: $color_1;
                 opacity: 56%;
-                font-size: .8rem;
+                font-size: clamp(.625rem, 2vw, .875rem);
                 font-family: $font-family_1;
                 font-weight: 500;
                 text-transform: uppercase;
                 white-space: nowrap;
-                width: 20%;
+                width: 100%;
             }
 
 
@@ -129,15 +79,9 @@ body {
 
             display: flex;
             justify-content: space-between;
-            // width: 1117px
         }
     }
 
-    >.wrap_main_lists {
-        display: flex;
-        max-width: 70%;
-        text-align: left;
-    }
 }
 
 
@@ -146,7 +90,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: left;
     justify-content: space-between;
     background-color: $background-color_2;
     border-radius: 4px;
@@ -156,12 +99,12 @@ body {
     .wrap_dates {
         padding: 1em;
         text-align: left;
-        width: 10%;
+        width: 100%;
 
         h5 {
-            width: 100%;
+            // width: 100%;
             white-space: nowrap;
-            font-size: 18px;
+            font-size: clamp(0.625em, 2vw, 1.125em);
             font-weight: 500;
             color: $color_1;
             font-family: $font-family_1;
@@ -169,35 +112,43 @@ body {
     }
 
     >.wrap_button {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
+        gap: 0.625rem;
         cursor: pointer;
 
         >.feather-more-vertical {
             stroke-width: 1;
-            margin-left: 1rem;
+            // margin-left: 1rem;
             stroke: #0D1426;
         }
 
         >.payroll_btn {
             all: unset;
-            padding: 14px;
-            width: 152px;
-            font-size: 16px;
+            // padding: .875rem 1.875rem;
+            width: 9.5rem;
+            padding: 0.875rem;
+            font-size: clamp(0.625rem, 2vw, 1rem);
+            white-space: nowrap;
             font-family: $font-family_1;
             color: $color_2;
-            background-color: $background-color_3;
+            background-color: $color_7;
             border-radius: 44px;
+
+            @media(max-width:782px) {
+                width: 6.5rem;
+            }
         }
     }
 
     >.wrap_pay_cycle {
-        // text-align: left;
+        width: 100%;
 
         >.date {
-            font-size: 18px;
+            font-size: clamp(0.625em, 2vw, 1.125em);
             font-weight: 500;
             color: $color_1;
             font-family: $font-family_1;
@@ -205,8 +156,9 @@ body {
 
         >span {
             font-family: $font-family_2;
-            font-size: 16px;
+            font-size: clamp(.6rem, 2vw, 1rem);
             opacity: 56%;
+            white-space: nowrap;
         }
     }
 }
@@ -216,9 +168,12 @@ body {
     border-bottom: 1px solid rgba(14, 33, 105, 0.08);
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
-    max-width: 100%;
+    // padding: 1rem;
+    // height: 62.9375rem;
+    width: 100vw;
     background-color: $background-color_1;
+    position: fixed;
+    z-index: 100;
 
     >.nav_right {
         position: relative;
@@ -285,6 +240,7 @@ body {
         justify-content: center;
         align-items: center;
         position: relative;
+        margin-right: 2rem;
     }
 }
 
@@ -420,10 +376,17 @@ body {
 
     >.position {
         font-family: $font-family_1;
-        font-size: 14px;
+        font-size: 0.875rem;
         color: $color_3;
         font-weight: 400;
+        opacity: 0.72;
+
     }
+
+    @media (max-width:701px) {
+        display: none;
+    }
+
 }
 
 .nav_accout {
@@ -446,6 +409,7 @@ body {
 
     .feather-chevron-down {
         stroke-width: 1;
+        cursor: pointer;
     }
 
     .feather-chevron-down.rotateChevron {
@@ -453,17 +417,13 @@ body {
     }
 }
 
-.feather {
-    cursor: pointer;
-}
-
 .wrap_aside {
     z-index: 1;
-    position: absolute;
+    position: fixed;
     border-right: 1px solid rgba(14, 33, 105, 0.08);
-    height: 120vh;
+    height: 100%;
     background-color: $background-color_1;
-    width: 80px;
+    width: 4.9rem;
     overflow: hidden;
     transition-delay: 300ms;
     transition: width 0.15s cubic-bezier(0.4, 0, 0.2, 1);
@@ -572,46 +532,44 @@ body {
     h1 {
         margin-bottom: 3rem;
     }
-
-    width: 76%;
-    padding: 2rem;
-
-    @media (max-width: 1300px) {
-        width: 90%;
-    }
 }
 
-// * {
-//     outline: 1px solid limegreen;
-// }
 
 .container_wrapper {
+    max-width: 90rem;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 3.5rem;
     grid-row-gap: 2rem;
-    padding: 1em;
+    padding: 1em 0;
+    // margin: 0 auto;
+
+    @media (max-width: 785px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 }
 
 .div {
-    max-width: 100%;
-    min-height: 140px;
     border: 1px solid #4258A614;
     background-color: $background-color_2;
     display: flex;
-    justify-content: space-evenly;
-    padding: 2em;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    height: 8.75rem;
+    padding: 1em;
     border-radius: 4px;
 
     >.for_icon {
         border-radius: 50%;
         background-color: $background-color_7;
-        margin-right: .7em;
-        // padding: 1em;
-        width: 56px;
-        height: 56px;
+        // margin-right: .7em;
+        max-width: 56px;
+        max-height: 56px;
+        width: 100%;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -622,10 +580,10 @@ body {
     >.wrap_text {
         display: flex;
         flex-direction: column;
-        width: 70%;
+
 
         >h5 {
-            font-size: clamp(1rem, 3vw, 1.25rem);
+            font-size: 1.25rem;
             font-family: $font-family_1;
             font-weight: 500;
             color: $color_1;
@@ -634,8 +592,8 @@ body {
 
         >span {
             font-family: $font-family_2;
-            font-size: clamp(.5rem, 1.5vw, 1rem);
             font-weight: 500;
+            font-size: clamp(.8rem, -1rem + 3vw, 1rem);
             letter-spacing: 0.1px;
             color: $color_1;
             opacity: 56%;
@@ -644,15 +602,14 @@ body {
     }
 
     >.run {
-        height: 62%;
-        min-width: 12%;
+        // padding: 0.625rem;
         border-radius: 4px;
         transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin-left: .3em;
+        // margin-left: .3em;
 
         &:hover {
             .feather.feather-chevron-right {
@@ -691,12 +648,6 @@ body {
                 transform: translateX(-8px);
             }
 
-            // &:hover {
-            //     transition: all 200ms;
-            //     color: #052599;
-            //     transform: translateX(-5px);
-
-            // }
         }
 
         &:hover {
@@ -706,19 +657,6 @@ body {
     }
 }
 
-.div.one {
-    grid-area: 1 / 1 / 3 / 3;
-
-}
-
-.div.two {
-    grid-area: 1 / 3 / 3 / 5;
-
-}
-
-.div.three {
-    grid-area: 3 / 1 / 5 / 3;
-}
 
 .user_dropdown {
     position: absolute;
@@ -1341,8 +1279,8 @@ input[type="number"] {
 footer {
     position: fixed;
     bottom: 0;
-    left: 80px;
-    width: 100%;
+    left: 0;
+    width: 100vw;
     height: 96px;
     background-color: $background-color_5;
     display: flex;
@@ -1373,8 +1311,8 @@ footer {
     >.wrap_back_btn {
         transition: background-color .2s linear;
         border-radius: 8px;
-        // outline: 1px solid green;
         cursor: pointer;
+        margin-left: 2rem;
 
         >a {
             display: flex;
